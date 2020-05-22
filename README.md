@@ -1,6 +1,17 @@
 # text-topics
 
-xx
+
+NMF implementation of 2 cases:
+- if you know the number of topics: nmf_fixed_k.py
+- if you **don't** know the number of topics: nmf_unknown_k.py
+
+### Data
+The directories in /data:
+- source_texts: Excerpts of wikipedia biographies falling in 3 broad topics:
+    - Tudor dynasty (marked with "a")
+    - Midcentury Architects / Designer (marked with "b")
+    - Stars of the silent movie area (marked with "c")
+- target_texts: Very short texts based on source texts whith varying similarity (and one text about a movie star not included in source texts)
 
 ### Further Reading
 #### General
