@@ -1,5 +1,5 @@
 import json
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List
 
 # load external scripts / class
 from load_data import get_texts
