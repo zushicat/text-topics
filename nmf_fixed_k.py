@@ -77,8 +77,8 @@ if __name__ == '__main__':
     
     target_texts = get_texts("target_texts")  # get short test texts
     pred_vector_matrix = vectorizer.transform_documents_to_vectormatrix(target_texts.values())  # get vector matrix of new texts with fitted vectorizer
-    pred_y = nmf_model.transform(pred_vector_matrix)  # get topic probabiliy
-    for i, p in enumerate(pred_y):  # same as above
+    pred_topic_distribution = nmf_model.transform(pred_vector_matrix)  # get topic probabiliy
+    for i, p in enumerate(pred_topic_distribution):  # same as above
         doc_title = list(target_texts.keys())[i]
         
         # print(doc_title, p)  # see topic distribution for each text
