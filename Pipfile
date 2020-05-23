@@ -10,6 +10,7 @@ sklearn = "*"
 numpy = "*"
 nltk = "==3.4.5"
 gensim = "*"
+tensorflow = "*"
 
 [requires]
 python_version = "3.7"
