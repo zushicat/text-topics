@@ -62,7 +62,7 @@ if __name__ == '__main__':
     for i, p in enumerate(train_y):
         doc_title = list(source_texts.keys())[i]  # get title (filename) assoc. with doc
         predicted_topic_index = np.argmax(p)  # get most relevant topic index
-        topic_name = topic_names[predicted_topic_index]  # het human readable topic with index
+        topic_name = topic_names[predicted_topic_index]  # get human readable topic with index
         titles_by_topics[topic_name].append(doc_title)  # append document title
     
     # print(json.dumps(titles_by_topics, indent=2))
