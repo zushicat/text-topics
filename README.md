@@ -5,6 +5,10 @@ NMF implementation of 2 cases:
 - if you know the number of topics: nmf_fixed_k.py
 - if you **don't** know the number of topics: nmf_unknown_k.py
 
+There is an LDA implementation including grid search for unknown number of topics (k): lda.py    
+(This is for the sake of completeness, since the LDA results are not as good as those of NMF.)
+
+
 ### Data
 The directories in /data:
 - source_texts: Excerpts of wikipedia biographies falling in 3 broad topics:
