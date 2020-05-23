@@ -104,7 +104,7 @@ if __name__ == '__main__':
         topic_name = topic_names[predicted_topic_index]  # get human readable topic with index
         titles_by_topics[topic_name].append(doc_title)  # append document title
     
-    # print(json.dumps(titles_by_topics, indent=2))
+    print(json.dumps(titles_by_topics, indent=2))
 
     # ***
     # predict topics of short test texts
@@ -120,7 +120,7 @@ if __name__ == '__main__':
     for i, p in enumerate(pred_topic_distribution):  # same as above
         doc_title = list(target_texts.keys())[i]
         
-        print(doc_title, p)  # see topic distribution for each text
+        # print(doc_title, p)  # see topic distribution for each text
         
         predicted_topic_index = np.argmax(p)  # get index of max. value
         if p[predicted_topic_index] < threshold:
