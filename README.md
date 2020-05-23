@@ -21,6 +21,8 @@ The directories in /data:
 #### General
 - "Topic Analysis": https://monkeylearn.com/topic-analysis/
 - "Latent Semantic Analysis using Python": https://www.datacamp.com/community/tutorials/discovering-hidden-topics-python
+#### Text Cleaning (NLTK)
+- "Stemming and Lemmatization in Python": datacamp.com/community/tutorials/stemming-lemmatization-python
 #### Tokenizer / Vectorizer
 - "An Intuitive Understanding of Word Embeddings: From Count Vectors to Word2Vec": https://www.analyticsvidhya.com/blog/2017/06/word-embeddings-count-word2veec/
 - Scikit Learn documentation
@@ -41,6 +43,7 @@ The directories in /data:
     - "Topic Modeling Quora Questions with LDA & NMF": https://towardsdatascience.com/topic-modeling-quora-questions-with-lda-nmf-aff8dce5e1dd
 - Hyperparameter Tuning
     - "Topic Modeling using NMF and LDA using sklearn": https://shravan-kuchkula.github.io/topic-modeling/#gridsearch-the-best-lda-model
+    - "LDA in Python – How to grid search best topic models?": https://www.machinelearningplus.com/nlp/topic-modeling-python-sklearn-examples/#11howtogridsearchthebestldamodel
 - Topic Coherence (unknown number of topics k)
     - "Evaluation of Topic Modeling: Topic Coherence": https://datascienceplus.com/evaluation-of-topic-modeling-topic-coherence/
     - "Evaluate Topic Models: Latent Dirichlet Allocation (LDA)": https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0
