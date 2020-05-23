@@ -89,6 +89,10 @@ if __name__ == '__main__':
     print(json.dumps(topics_top_words, indent=2))
     topic_names: List[str] = ["bio_tudor", "bio_design_arch", "bio_silent_movie_stars", "unknown_topic"]
 
+    # ***************************
+    # following is the same as in nmf_fixed_k.py and nmf_unknown.k.py (except model name)
+    # ***************************
+
     # ***
     # check out source text topics
     titles_by_topics: Dict[str, List[str]] = {x:[] for x in topic_names}
@@ -116,7 +120,7 @@ if __name__ == '__main__':
     for i, p in enumerate(pred_topic_distribution):  # same as above
         doc_title = list(target_texts.keys())[i]
         
-        # print(doc_title, p)  # see topic distribution for each text
+        print(doc_title, p)  # see topic distribution for each text
         
         predicted_topic_index = np.argmax(p)  # get index of max. value
         if p[predicted_topic_index] < threshold:
