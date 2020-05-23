@@ -11,10 +11,11 @@ The directories in /data:
     - Tudor dynasty (marked with "a")
     - Midcentury Architects / Designer (marked with "b")
     - Stars of the silent movie area (marked with "c")
-- target_texts: Very short texts based on source texts whith varying similarity (and one text about a movie star not included in source texts)
+- target_texts: Very short texts based on source texts whith varying similarity, marked accordingly to the source texts. Also, one text about a movie star not included in source texts and one text about "Charlie Brown" without any topic affiliation (marked with "d").
 
 ### Further Reading
 #### General
+- "Topic Analysis": https://monkeylearn.com/topic-analysis/
 - "Latent Semantic Analysis using Python": https://www.datacamp.com/community/tutorials/discovering-hidden-topics-python
 #### Tokenizer / Vectorizer
 - "An Intuitive Understanding of Word Embeddings: From Count Vectors to Word2Vec": https://www.analyticsvidhya.com/blog/2017/06/word-embeddings-count-word2veec/
