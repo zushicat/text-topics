@@ -43,15 +43,11 @@ def get_texts(dir_name: str) -> Dict[str, str]:
 
     def get_texts_simple(dir_name: str) -> Dict[str, str]:
     '''
-    Do not change the incoming text
+    Lowercase text and remove punctuation only
     '''
-    def remove_stopwords(token: List[str]) -> List[str]:
-        return [w for w in token if not w in STOPWORDS]  # filtered token
     def tokenize_text(text: str) -> List[str]:
         return TOKENIZER.tokenize(text)  # list of token without punctuation etc.
-    def get_token_lemmata(token: List[str]) -> List[str]:
-        return [LEMMATIZER.lemmatize(t) for t in token]
-
+    
     file_names = os.listdir(f"data/{dir_name}")
     texts: Dict[str, List[str]] = {}
     for file_name in file_names:
@@ -62,12 +58,7 @@ def get_texts(dir_name: str) -> Dict[str, str]:
         with open(f"data/{dir_name}/{file_name}") as f:
            texts[text_name] = f.read().replace("\n\n", " ")  # remove paragraphs
 
-        # ***
-        # simplify text in paragraphs
-        #document_token = remove_stopwords(tokenize_text(texts[text_name].lower()))
-        #document_token_lemmatized = get_token_lemmata(document_token)  # prefer lemmatization over stemming
-        #texts[text_name] = " ".join(document_token_lemmatized)
-        document_token = tokenize_text(texts[text_name].lower()
+        document_token = tokenize_text(texts[text_name]
         texts[text_name] = " ".join(document_token_lemmatized)
         
     return texts
