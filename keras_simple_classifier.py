@@ -116,7 +116,7 @@ if __name__ == '__main__':
         train_X, 
         train_y, 
         epochs=num_epochs, 
-        verbose=1,  # use verbose= 1 or 2 for output on training
+        verbose=1,  # use verbose= 1 or 2 for output on training, 0 for no output
     )  
 
 
