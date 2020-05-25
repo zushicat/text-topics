@@ -3,11 +3,12 @@
 
 NMF implementation of 2 cases:
 - if you know the number of topics: nmf_fixed_k.py
-- if you **don't** know the number of topics: nmf_unknown_k.py
+- if you **don't** know the number of topics: nmf_unknown_k.py    
 
 LDA implementation incl. grid search for unknown number of topics (k): lda.py    
-(This is for the sake of completeness, since the LDA results are not as good as those of NMF.)
+(This is for the sake of completeness, since the LDA results are not as good as those of NMF.)    
 
+A simple Keras implementation of a text multiclass classifier (with known classes): keras_simple_classifier.py
 
 ### Data
 The directories in /data:
