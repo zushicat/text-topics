@@ -3,8 +3,8 @@ import json
 from typing import Any, Dict, List, Set
 
 # load external scripts / class
-from load_data import get_texts
-from vectorizer import Vectorizer
+from _load_data import get_texts
+from _vectorizer import Vectorizer
 
 import gensim
 import numpy as np

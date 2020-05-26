@@ -2,8 +2,8 @@ import json
 from typing import Any, Dict, List
 
 # load external scripts / class
-from load_data import get_texts
-from vectorizer import Vectorizer
+from _load_data import get_texts
+from _vectorizer import Vectorizer
 
 import numpy as np
 from sklearn.decomposition import NMF
