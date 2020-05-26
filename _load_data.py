@@ -58,7 +58,4 @@ def get_texts_simple(dir_name: str) -> Dict[str, str]:
         with open(f"data/{dir_name}/{file_name}") as f:
            texts[text_name] = f.read().replace("\n\n", " ")  # remove paragraphs
 
-        document_token = tokenize_text(texts[text_name])
-        texts[text_name] = " ".join(document_token)
-        
     return texts
