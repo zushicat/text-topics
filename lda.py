@@ -64,7 +64,7 @@ if __name__ == '__main__':
     vectorizer = Vectorizer(False)  # create instance of vectorizer: True (or None): tfidf, False: Count Vectorizer
 
     source_texts: Dict[str, str] = get_texts("source_texts")  # get normalized/cleaned texts from passed directory
-    vector_matrix, feature_names = vectorizer.create_vector_matrix_Tfidf(source_texts)  # get vector matrix and list of token (features)
+    vector_matrix, feature_names = vectorizer.create_vector_matrix(source_texts)  # get vector matrix and list of token (features)
 
     # ***
     # train lda

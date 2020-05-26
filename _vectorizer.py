@@ -10,7 +10,7 @@ class Vectorizer:
         else:
             self.vectorizer = CountVectorizer()
   
-    def create_vector_matrix_Tfidf(self, texts: Dict[str, str]) -> Tuple[Any, List[str]]:
+    def create_vector_matrix(self, texts: Dict[str, str]) -> Tuple[Any, List[str]]:
         corpus: List[str] = list(texts.values())  # each list element is a document
 
         vector_matrix = self.vectorizer.fit_transform(corpus)  # returns sparse matrix, [n_samples, n_features]

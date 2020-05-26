@@ -21,7 +21,7 @@ def _train_nmf(n_topics: int, vector_matrix: Any) -> Any:
     return nmf
 
 
-def _get_topic_top_words(nmf: Any, n_top_words: int) -> Dict[str, str]:
+def _get_topic_top_words(nmf: Any, feature_names: List[str], n_top_words: int) -> Dict[str, str]:
     '''
     This is a little different than the same named funktion in nmf_unknown_k.py: 
     returns dict with topic index: string of top words (instead of list of lists with top words)
@@ -37,7 +37,7 @@ if __name__ == '__main__':
     vectorizer = Vectorizer(True)  # create instance of vectorizer: True (or None): tfidf, False: Count Vectorizer
 
     source_texts: Dict[str, str] = get_texts("source_texts")  # get normalized/cleaned texts from passed directory
-    vector_matrix, feature_names = vectorizer.create_vector_matrix_Tfidf(source_texts)  # get vector matrix and list of token (features)
+    vector_matrix, feature_names = vectorizer.create_vector_matrix(source_texts)  # get vector matrix and list of token (features)
 
     # ***
     # train nmf
@@ -49,7 +49,7 @@ if __name__ == '__main__':
     # explore topics and create human readable topic name list; add attribute for unknown topics (see prediction below)
     # ! this hard coded list depends on input and is only fixed as long as nothing changes !
     n_top_words = 15
-    topics_top_words: Dict[str, str] = _get_topic_top_words(nmf_model, n_top_words)
+    topics_top_words: Dict[str, str] = _get_topic_top_words(nmf_model, feature_names, n_top_words)
 
     # print(json.dumps(topics_top_words, indent=2))
     topic_names: List[str] = ["bio_tudor", "bio_silent_movie_stars", "bio_design_arch", "unknown_topic"]
