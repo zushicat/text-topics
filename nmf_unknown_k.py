@@ -64,9 +64,7 @@ def _get_best_k(doc_texts: Set[str], feature_names: List[str], vector_matrix: An
         k_values.append(k)
 
         nmf_model = _train_nmf(k, vector_matrix)
-        nmf_W = nmf_model.transform(vector_matrix)
-        nmf_H = nmf_model.components_
-
+        
         topics_words = _get_topics_top_words(nmf_model, feature_names, n_top_words)
         topic_coherences[k] = _get_topic_coherence(word_2_vec_lookup, topics_words)
 
