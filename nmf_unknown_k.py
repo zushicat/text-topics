@@ -48,7 +48,7 @@ def _get_topic_coherence(word_2_vec_lookup: Any, topics_words: List[List[str]]) 
     return topic_coherence / len(topics_words)  # normalize (mean score across all topics)
 
 
-def _get_best_k(doc_texts: Set[str], vector_matrix: Any, kmin: int, kmax: int, n_top_words: int) -> int:
+def _get_best_k(doc_texts: Set[str], feature_names: List[str], vector_matrix: Any, kmin: int, kmax: int, n_top_words: int) -> int:
     # ***
     # create (gensim) word 2 vector model
     docs_tokenized: List[str] = [x.split() for x in doc_texts]
@@ -85,7 +85,7 @@ if __name__ == '__main__':
     kmax = 5
     n_top_words = 10 
 
-    best_k = _get_best_k(source_texts.values(), vector_matrix, kmin, kmax, n_top_words)
+    best_k = _get_best_k(source_texts.values(), feature_names, vector_matrix, kmin, kmax, n_top_words)
 
 
     # ***************************
