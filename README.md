@@ -40,7 +40,7 @@ Top 3 phrases from each topic:
 Top 3 phrases for the same topics from Wikipedia category phrase processing:
 
 topic 0: 16th century | english | monarchs
-topic 1: american | architects | century
+topic 1: american | architects | 20th century
 topic 2: american | actresses | 20th century
 ```
 
