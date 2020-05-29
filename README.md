@@ -28,10 +28,10 @@ Top 3 phrases from each topic:
     "henry", "england", "elizabeth", "king", "anne", "marriage", "death", "son", "throne", "college"
   ],
   [
-    "design", "architect", "architecture", "niemeyer", "building", "office", "movement", "designer", "furniture", "site"
+    "film", "swanson", "keaton", "bow", "hollywood", "actress", "cinema", "star", "pickford", "actor"
   ],
   [
-    "film", "swanson", "keaton", "bow", "hollywood", "actress", "cinema", "star", "pickford", "actor"
+    "design", "architect", "architecture", "niemeyer", "building", "office", "movement", "designer", "furniture", "site"
   ]
 ]
 ```
