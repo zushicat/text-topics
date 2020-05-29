@@ -2,8 +2,8 @@ import json
 from typing import Any, Dict, List
 
 # load external scripts / class
-from load_data import get_texts
-from vectorizer import Vectorizer
+from _load_data import get_texts
+from _vectorizer import Vectorizer
 
 import numpy as np
 from sklearn.decomposition import LatentDirichletAllocation as LDA
@@ -61,7 +61,7 @@ def _get_topic_top_words(nmf: Any, n_top_words: int) -> Dict[str, str]:
 
 
 if __name__ == '__main__':
-    vectorizer = Vectorizer(False)  # create instance of vectorizer: True (or None): tfidf, False: Count Vectorizer
+    vectorizer = Vectorizer(True)  # create instance of vectorizer: True (or None): tfidf, False: Count Vectorizer
 
     source_texts: Dict[str, str] = get_texts("source_texts")  # get normalized/cleaned texts from passed directory
     vector_matrix, feature_names = vectorizer.create_vector_matrix(source_texts)  # get vector matrix and list of token (features)
