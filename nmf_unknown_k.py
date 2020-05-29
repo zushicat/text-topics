@@ -107,10 +107,10 @@ if __name__ == '__main__':
     # check out source text topics
     titles_by_topics: Dict[str, List[str]] = {x:[] for x in topic_names}
     
-    train_y: Any = nmf_model.transform(vector_matrix)
-    for i, p in enumerate(train_y):
+    pred_topic_distributions: Any = nmf_model.transform(vector_matrix)
+    for i, dist in enumerate(pred_topic_distributions):
         doc_title = list(source_texts.keys())[i]  # get title (filename) assoc. with doc
-        predicted_topic_index = np.argmax(p)  # get most relevant topic index
+        predicted_topic_index = np.argmax(dist)  # get most relevant topic index
         topic_name = topic_names[predicted_topic_index]  # het human readable topic with index
         titles_by_topics[topic_name].append(doc_title)  # append document title
     
