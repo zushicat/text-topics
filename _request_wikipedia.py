@@ -7,7 +7,7 @@ import requests
 WIKIPEDIA_REQUEST_URL = "http://en.wikipedia.org/w/api.php?action=query"
 
 
-def get_wikipedia_title(request_token: List[str]) -> Dict[str, str]:
+def _get_wikipedia_title(request_token: List[str]) -> Dict[str, str]:
     '''
     Returns Dict with <pageid>: title
     '''
@@ -28,7 +28,7 @@ def get_wikipedia_title(request_token: List[str]) -> Dict[str, str]:
     return results
 
 
-def get_wikipedia_categories(pageids: Set[int]) -> List[str]:
+def _get_wikipedia_categories(pageids: Set[int]) -> List[str]:
     out_format = "json"
     prop = "categories"
     pageids = "|".join(list(pageids))
@@ -46,8 +46,27 @@ def get_wikipedia_categories(pageids: Set[int]) -> List[str]:
     return categories
 
 
+def request_wikipedia(top_words: List[str]) -> List[str]:
+    print(top_words)
+    top_words = [x.replace("_", " ") for x in top_words]  # get rid of _ in phrase
+    
+    page_ids_titles = _get_wikipedia_title(top_words)
+    categories = _get_wikipedia_categories(page_ids_titles.keys())
+
+    return categories
+
 
 if __name__ == "__main__":
-    page_ids_titles = get_wikipedia_title(["henry", "viii"])
-    categories = get_wikipedia_categories(page_ids_titles.keys())
+    token = [
+        "artes",
+        "august",
+        "appointment",
+        "beaufort",
+        "be"
+    ]
+    page_ids_titles = _get_wikipedia_title(token)  # (["henry", "viii"])
+    categories = _get_wikipedia_categories(page_ids_titles.keys())
+    
+    print(page_ids_titles)
+    print()
     print(categories)
