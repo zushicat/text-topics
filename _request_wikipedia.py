@@ -34,7 +34,7 @@ def _get_wikipedia_categories(pageids: Set[int]) -> List[str]:
     pageids = "|".join(list(pageids))
 
     request_url = f"{WIKIPEDIA_REQUEST_URL}&format={out_format}&prop={prop}&pageids={pageids}"
-    print(request_url)
+    
     categories: List[str] = []
     try:
         for page_id, r in requests.get(request_url).json()["query"]["pages"].items():
@@ -47,7 +47,6 @@ def _get_wikipedia_categories(pageids: Set[int]) -> List[str]:
 
 
 def request_wikipedia(top_words: List[str]) -> List[str]:
-    print(top_words)
     top_words = [x.replace("_", " ") for x in top_words]  # get rid of _ in phrase
     
     page_ids_titles = _get_wikipedia_title(top_words)
