@@ -172,7 +172,10 @@ if __name__ == '__main__':
            topic_docs[predicted_topic_index] = []
         topic_docs[predicted_topic_index].append(top_words)
     
-
+    # ***
+    # sort keys in dictionary
+    topic_docs = {k: topic_docs[k] for k in sorted(topic_docs)}
+    
     # ******************************************************
     #
     # request wikipedia categories per doc and get most relecant category per topic
@@ -194,7 +197,7 @@ if __name__ == '__main__':
                 topic_categories[topic_idx].append(cat)
     
     # ***
-    # count categories per topic
+    # if you like to gain some insight about collected categories: count categories per topic
     # for topic_idx, category_list in topic_categories.items():
     #     counted_categories = Counter(category_list)
     #     print(f"---- {topic_idx} ----")
