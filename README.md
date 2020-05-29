@@ -16,7 +16,7 @@ A simple Keras implementation of a text multiclass classifier (with known classe
 A topic can be represented resp. interpreted by the most important token / phrases of its documents. Sometimes, this is not as clear as one would like.    
 These scripts:
 - identify_topic.py
-- request_wikipedia.py
+- request_wikipedia.py    
 try to solve this problem by requesting Wikipedia with top token on a document level and processing the returned categories for each topic.
 
 The results are quite satisfying as shown in following example:
