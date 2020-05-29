@@ -21,7 +21,7 @@ try to solve this problem by requesting Wikipedia with top token on a document l
 
 The results are quite satisfying as shown in following example:
 ```
-Top 3 phrases from each topic:
+Top phrases from each topic:
 
 [
   [
