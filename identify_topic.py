@@ -241,7 +241,7 @@ if __name__ == '__main__':
 
     # ***
     # get top 3 of the most representing phrases per topic
-    num_top_words = 4
+    num_top_words = 3
     for i, doc_matrix in enumerate(vector_matrix):
         doc_token_counted = zip(feature_list, np.asarray(doc_matrix.sum(axis=0)).ravel())
         sorted_by_counts = sorted(doc_token_counted, key=lambda x: x[1], reverse=True)[:num_top_words]
