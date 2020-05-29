@@ -77,14 +77,14 @@ if __name__ == '__main__':
     
     target_texts = get_texts("target_texts")  # get short test texts
     pred_vector_matrix = vectorizer.transform_documents_to_vectormatrix(target_texts.values())  # get vector matrix of new texts with fitted vectorizer
-    pred_topic_distribution = nmf_model.transform(pred_vector_matrix)  # get topic probabiliy
-    for i, p in enumerate(pred_topic_distribution):  # same as above
+    pred_topic_distributions = nmf_model.transform(pred_vector_matrix)  # get topic probabiliy
+    for i, dist in enumerate(pred_topic_distributions):  # same as above
         doc_title = list(target_texts.keys())[i]
         
         # print(doc_title, p)  # see topic distribution for each text
         
-        predicted_topic_index = np.argmax(p)  # get index of max. value
-        if p[predicted_topic_index] < threshold:
+        predicted_topic_index = np.argmax(dist)  # get index of max. value
+        if dist[predicted_topic_index] < threshold:
             topic_name = "unknown_topic"
         else:
             topic_name = topic_names[predicted_topic_index]
