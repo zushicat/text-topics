@@ -28,10 +28,10 @@ Top 3 phrases from each topic:
     "henry", "england", "elizabeth", "king", "anne", "marriage", "death", "son", "throne", "college"
   ],
   [
-    "film", "swanson", "keaton", "bow", "hollywood", "actress", "cinema", "star", "pickford", "actor"
+    "design", "architect", "architecture", "niemeyer", "building", "office", "movement", "designer", "furniture", "site"
   ],
   [
-    "design", "architect", "architecture", "niemeyer", "building", "office", "movement", "designer", "furniture", "site"
+    "film", "swanson", "keaton", "bow", "hollywood", "actress", "cinema", "star", "pickford", "actor"
   ]
 ]
 ```
@@ -40,8 +40,8 @@ Top 3 phrases from each topic:
 Top 3 phrases for the same topics from Wikipedia category phrase processing:
 
 topic 0: 16th century | english | monarchs
-topic 1: american | actresses | 20th century
-topic 2: american | architects | designers
+topic 1: american | architects | century
+topic 2: american | actresses | 20th century
 ```
 
 ### Data
