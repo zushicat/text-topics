@@ -6,9 +6,43 @@ NMF implementation of 2 cases:
 - if you **don't** know the number of topics: nmf_unknown_k.py    
 
 LDA implementation incl. grid search for unknown number of topics (k): lda.py    
-(This is for the sake of completeness, since the LDA results are not as good as those of NMF.)    
+This is for the sake of completeness, since 
+- most parts of the code are no different from NMF usage (hence a little redundant)
+- the LDA results are not as good as those of NMF
 
 A simple Keras implementation of a text multiclass classifier (with known classes): keras_simple_classifier.py
+
+### Human readable topics
+A topic can be represented resp. interpreted by the most important token / phrases of its documents. Sometimes, this is not as clear as one would like.    
+These scripts:
+- identify_topic.py
+- request_wikipedia.py
+try to solve this problem by requesting Wikipedia with top token on a document level and processing the returned categories for each topic.
+
+The results are quite satisfying as shown in following example:
+```
+Top 3 phrases from each topic:
+
+[
+  [
+    "henry", "england", "elizabeth", "king", "anne", "marriage", "death", "son", "throne", "college"
+  ],
+  [
+    "design", "architect", "architecture", "niemeyer", "building", "office", "movement", "designer", "furniture", "site"
+  ],
+  [
+    "film", "swanson", "keaton", "bow", "hollywood", "actress", "cinema", "star", "pickford", "actor"
+  ]
+]
+```
+
+```
+Top 3 phrases for the same topics from Wikipedia category phrase processing:
+
+topic 0: 16th century | english | monarchs
+topic 1: american | actresses | 20th century
+topic 2: american | architects | designers
+```
 
 ### Data
 The directories in /data:
