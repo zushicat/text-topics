@@ -55,7 +55,7 @@ Excerpts of wikipedia biographies falling in 3 broad topics:
 - target_texts:   
 Very short texts based on source texts whith varying similarity, marked accordingly to the source texts. Also, one text about a movie star not included in source texts and one text about "Charlie Brown" without any topic affiliation (marked with "d").
 
-This data is corresponding to: https://github.com/zushicat/text-similarity
+This data is corresponding to: https://github.com/zushicat/text-similarity-extractive
 
 
 ### Further Reading
